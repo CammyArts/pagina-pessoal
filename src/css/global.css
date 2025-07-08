@@ -1,0 +1,11 @@
+@import '/src/css/fonts.css';
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    cursor: url('/src/pages/main/img/cursor.png') 16 16, auto;
+}
