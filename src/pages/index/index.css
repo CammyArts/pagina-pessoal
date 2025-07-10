@@ -1,0 +1,91 @@
+@import '/src/css/global.css';
+@import '/src/pages/index/partials/container.css';
+@import '/src/pages/index/partials/foto.css';
+@import '/src/pages/index/partials/seta.css';
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    display: flex;
+    align-items: center;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.image{
+    max-width: 50%;
+    max-height: 50%;
+}
+.seta{
+    max-width: 7rem;
+    max-height: 7rem;
+    margin-left: 2rem;
+}
+
+.skills{
+    position: absolute;
+    margin-top: 5%;
+}
+
+@media screen and (max-width: 989px){
+    .container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+.texto{
+    max-width: 20rem;
+}
+.image{
+    max-width: 40%;
+    max-height: 40%;
+}
+.seta{
+    max-width: 2rem;
+    max-height: 2rem;
+}
+.skills{
+    position: relative;
+    margin-top: 0;
+    max-width: 15rem;
+}
+
+}
