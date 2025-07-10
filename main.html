@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/pages/main/main.css">
-    <title>Pagina Pessoal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/pages/main/main.css">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <title>Pagina Pessoal</title>
     
 
 </head>
@@ -14,35 +17,51 @@
 
 <div class="container">
   <div class="header"></div>
-  <div class="menu"><img id="foto" src="/src/pages/main/img/camila.png" alt="foto-camila"></div>
-  <div class="content">
+  <div data-aos="fade-up" class="menu"><img id="foto" src="src/pages/main/img/camila.png" alt="foto-camila"></div>
+  <div data-aos="fade-up" class="content">
     <div class="texto">
     <h1>Olá🤗</h1>
-    <p>Meu nome é Camila Rodrigues e essa aí do lado sou eu em uma viagem para Três Marias aperta na setinha ao lado pra me conhecer melhor</p>
-  </div><img id="seta" src="/src/pages/main/img/seta.png" alt=""></div>
+    <p>Meu nome é Camila Rodrigues, e essa aí do lado, sou eu, em uma viagem para Três Marias, 
+      aperta na setinha ao lado para me conhecer melhor</p>
+  </div><img id="seta" src="/src/pages/main/img/seta.png" alt="seta"></div>
   
   <div class="footer"></div>
 </div>
 
 </body>
+<!-- THREE.js para o VANTA -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
 
-  <script>
-    VANTA.FOG({
-      el: "#background",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      highlightColor: 0xffdd99,
-      midtoneColor: 0xff7be9,
-      lowlightColor: 0x64ffe9,
-      baseColor: 0xffebeb,
-      blurFactor: 0.44,
-      zoom: 1,
-      speed: 0.60
-    });
-  </script>
+<!-- VANTA.js (efeito de fundo animado) -->
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+
+<!-- AOS (animação de entrada) -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // Inicia AOS
+  AOS.init();
+
+  // Inicia o efeito VANTA
+  VANTA.FOG({
+    el: "#background",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    highlightColor: 0xffdd99,
+    midtoneColor: 0xff7be9,
+    lowlightColor: 0x64ffe9,
+    baseColor: 0xffebeb,
+    blurFactor: 0.44,
+    zoom: 1,
+    speed: 0.60
+  });
+
+  // Redireciona ao clicar na seta
+  document.getElementById("seta").addEventListener("click", function () {
+    window.location.href = "src/pages/segunda/segunda.html";
+  });
+</script>
+
 </html>
